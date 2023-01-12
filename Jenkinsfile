@@ -29,8 +29,7 @@ pipeline {
                     withCredentials([string(credentialsId: 'dockerhub-pwd', variable: 'dockerhubpwd')]) {
                         sh 'docker login -u b33mo -p ${dockerhubpwd}' // login to docker hub
                     }
-                    sh 'docker tag cicd-demo b33mo/default:cicd-demo'
-                    sh 'docker push b33mo/default:cicd-demo'
+                    sh 'docker push b33mo/cicd-demo'
                 }
             }
         }
