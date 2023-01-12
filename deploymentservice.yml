@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: spring-boot-k8s
-          image: b33mo/default # Image that will be used to containers in the cluster
+          image: b33mo/default:cicd-demo # Image that will be used to containers in the cluster
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080 # The port that the container is running on in the cluster
